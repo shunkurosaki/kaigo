@@ -19,7 +19,7 @@ class WelcomesController < ApplicationController
 
     respond_to do |format|
       if @welcome.save
-        format.html { redirect_to welcomes_path, notice: 'Welcome was successfully created.' }
+        format.html { redirect_to new_welcome_path, notice: 'Welcome was successfully created.' }
         format.json { render :show, status: :created, location: @welcome }
       else
         format.html { render :new }
